@@ -217,7 +217,7 @@ export default function ServicesPage() {
             {[
               {
                 name: "iPhone 15 Pro max",
-                img: "/images/15-pro-max.jpg",
+                img: "https://images.unsplash.com/photo-1695764043502-c69f58e11368?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               },
               {
                 name: "Samsung S24 Ultra",
@@ -229,7 +229,7 @@ export default function ServicesPage() {
               },
               {
                 name: "iPad Air 2024",
-                img: "/images/Ipad Air.jpg",
+                img: "https://images.unsplash.com/photo-1682427286841-1f3ff788752b?q=80&w=764&auto=format&fit=crop",
               },
             ].map((item, i) => (
               <Card

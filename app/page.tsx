@@ -16,6 +16,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Navigation from "@/components/navigation"
 import { decodeLink } from "@/lib/utils"
+import Image from "next/image"
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -99,7 +100,7 @@ export default function HomePage() {
                 <p className="text-sm opacity-80">Devices Fixed</p>
               </div>
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 transition-all">
-                <div className="text-4xl font-bold mb-2">10+</div>
+                <div className="text-4xl font-bold mb-2">2+</div>
                 <p className="text-sm opacity-80">Years Experience</p>
               </div>
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 transition-all">
@@ -260,10 +261,10 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "iPhone 17 pro max", price: "₦1.1m+", img: "/images/17-pro-max.jpg"},
-              { name: "MacBook Air M2", price: "₦1.2m+", img: "/images/Mac-book.jpg"},
-              { name: "Samsung S24", price: "₦450k+", img: "/images/S24-ULTRA.jpg"},
-              { name: "iPad Pro", price: "₦600k+", img: "/images/ipad-pro.jpg"}
+              { name: "iPhone 17 pro max", price: "₦1.1m+", img: "https://images.unsplash.com/photo-1759588071781-2c3ba9128497?q=80&w=2070&auto=format&fit=crop" },
+              { name: "MacBook Air M2", price: "₦1.2m+", img: "https://images.unsplash.com/photo-1738494610272-73d030462f8e?q=80&w=1974&auto=format&fit=crop" },
+              { name: "Samsung S24", price: "₦450k+", img: "https://images.unsplash.com/photo-1706300896423-7d08346e8dbb?q=80&w=1935&auto=format&fit=crop" },
+              { name: "iPad Pro", price: "₦600k+", img: "https://images.unsplash.com/photo-1607452258545-943d7243463c?w=600&auto=format&fit=crop"}
             ].map((product, i) => (
               <Card
                 key={i}
@@ -272,9 +273,11 @@ export default function HomePage() {
                 <CardContent className="p-6">
                   {/* product image - replace placeholders in /public/images or use your CDN links */}
                   <div className="w-full h-48 rounded-xl mb-4 overflow-hidden bg-gray-100">
-                    <img
+                    <Image
                       src={product.img}
-              
+                      alt={product.name}
+                      width={400}
+                      height={400}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
